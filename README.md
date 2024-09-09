@@ -11,6 +11,17 @@ Reef is a simple and minimalistic productivity tool that helps you focus on your
 - Simple and intuitive interface
 - Material You
 
+
+## Installation
+
+Reef is available on the Google Play Store. You can download it from [here](https://play.google.com/store/apps/details?id=dev.pranav.reef).
+
+[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+    alt="Get it on Play Store"
+    height="80">](https://play.google.com/store/apps/details?id=dev.pranav.reef)
+
+
+
 ## Screenshots
 
 <div style="display:flex; justify-content:center;">
@@ -39,7 +50,4 @@ Reef is a simple and minimalistic productivity tool that helps you focus on your
         src="screenshots/notifs.png"
         alt="Editor" width="24%" />
 </div>
-## Installation
-
-Reef is available on the Google Play Store. You can download it from [here](https://play.google.com/store/apps/details?id=dev.pranav.reef).
 
