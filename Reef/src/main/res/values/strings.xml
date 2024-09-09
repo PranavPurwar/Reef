@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Reef</string>
+    <string name="accessibility_service_name">Reef Service</string>
+    <string name="app_description">Reef is an open source productivity app designed to help you reduce your screen time and improve your productivity.</string>
+    <string name="accessibility_service">Accessibility Service</string>
+    <string name="accessibility_service_description">We use accessibility service to block distracting apps and help you focus on work.</string>
+    <string name="accessibility_service_app_limit">We use accessibility service to enforce per-app screen time limits.</string>
+    <string name="remove_limits">Remove Limits</string>
+    <string name="confirm">Confirm</string>
+    <string name="agree">Agree</string>
+    <string name="time_remaining">Time Remaining: %1$s</string>
+    <string name="focus_mode">Focus Mode</string>
+    <string name="focus_mode_complete">You have completed the focus mode!</string>
+    <string name="focus_mode_description">Focus mode will block all apps except basic needs like SMS, calling, etc.</string>
+    <string name="common_continue">Continue</string>
+    <string name="app_usage">App Usage</string>
+    <string name="start_focus_mode">Start Focus Mode</string>
+    <string name="usage_access">Usage Access</string>
+    <string name="usage_access_description">We use usage access to track your app usage, no data is shared or collected.</string>
+    <string name="app_usage_statistics">App Usage Statistics</string>
+    <string name="app_usage_statistics_description">We use app usage statistics permission to help control screen time. No data leaves your device.</string>
+    <string name="notification_permission">Notification Permission</string>
+    <string name="notification_permission_description">Please grant the notification permission to continue.</string>
+    <string name="battery_optimization_exception">Battery Optimization Exception</string>
+    <string name="battery_optimization_exception_description">Please grant the battery optimization exceptions to continue.</string>
+    <string name="hard_mode">Hard Mode</string>
+    <string name="intermediate_mode">Intermediate Mode</string>
+    <string name="east_mode">East Mode</string>
+    <string name="choose_a_mode_to_begin_with">Choose a mode to begin with</string>
+    <string name="choose_mode">Choose Mode</string>
+    <string name="nothing">nothing</string>
+    <string name="whitelist_apps">Whitelist apps</string>
+    <string name="loading">Loading…</string>
+</resources>
