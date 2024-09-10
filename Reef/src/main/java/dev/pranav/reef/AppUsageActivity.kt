@@ -1,7 +1,6 @@
 package dev.pranav.reef
 
 import android.annotation.SuppressLint
-import android.app.usage.UsageStats
 import android.app.usage.UsageStatsManager
 import android.content.Intent
 import android.content.pm.ApplicationInfo
@@ -9,7 +8,6 @@ import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Process
-import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,7 +16,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.AdRequest
 import com.google.android.material.snackbar.Snackbar
 import dev.pranav.reef.databinding.ActivityUsageBinding
 import dev.pranav.reef.databinding.AppUsageItemBinding
@@ -70,9 +67,6 @@ class AppUsageActivity : AppCompatActivity() {
             )
             this.adapter = adapter
         }
-
-        val adRequest = AdRequest.Builder().build()
-        binding.adView.loadAd(adRequest)
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -80,7 +74,8 @@ class AppUsageActivity : AppCompatActivity() {
         super.onResume()
 
         lifecycleScope.launch(Dispatchers.IO) {
-            val appUsageStats = AppLimits.getUsageStats(getSystemService(USAGE_STATS_SERVICE) as UsageStatsManager)
+            val appUsageStats =
+                AppLimits.getUsageStats(getSystemService(USAGE_STATS_SERVICE) as UsageStatsManager)
 
             val launcherApps = getSystemService(LAUNCHER_APPS_SERVICE) as LauncherApps
 
@@ -98,13 +93,6 @@ class AppUsageActivity : AppCompatActivity() {
                 adapter.updateData(filteredAppUsageStats)
             }
         }
-
-        binding.adView.resume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        binding.adView.pause()
     }
 
     inner class AppUsageViewHolder(private val binding: AppUsageItemBinding) :
@@ -157,6 +145,7 @@ class AppUsageActivity : AppCompatActivity() {
             holder.bind(appUsageStats[position], packageManager)
         }
 
+        @SuppressLint("NotifyDataSetChanged")
         fun updateData(newAppUsageStats: List<Stats>) {
             appUsageStats = newAppUsageStats
             notifyDataSetChanged()

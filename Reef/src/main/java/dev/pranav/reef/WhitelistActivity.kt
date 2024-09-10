@@ -1,6 +1,5 @@
 package dev.pranav.reef
 
-import android.annotation.SuppressLint
 import android.content.pm.ApplicationInfo
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
@@ -13,7 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.AdRequest
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dev.pranav.reef.databinding.ActivityWhitelistBinding
 import dev.pranav.reef.databinding.AppItemBinding
@@ -72,21 +70,6 @@ class WhitelistActivity : AppCompatActivity() {
                 this, OrientationHelper.VERTICAL
             )
         )
-
-        val adRequest = AdRequest.Builder().build()
-        binding.adView.loadAd(adRequest)
-    }
-
-    @SuppressLint("NotifyDataSetChanged")
-    override fun onResume() {
-        super.onResume()
-
-        binding.adView.resume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        binding.adView.pause()
     }
 
     inner class ApplicationViewHolder(private val binding: AppItemBinding) :

@@ -1,9 +1,7 @@
 package dev.pranav.reef
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.ads.AdRequest
 import dev.pranav.reef.databinding.ActivityDailyLimitBinding
 import dev.pranav.reef.util.AppLimits
 import dev.pranav.reef.util.applyDefaults
@@ -46,19 +44,6 @@ class ApplicationDailyLimitActivity : AppCompatActivity() {
                 AppLimits.saveLimits()
                 finishAfterTransition()
             }
-
-            val adRequest = AdRequest.Builder().build()
-            adView.loadAd(adRequest)
         }
-    }
-
-    override fun onPause() {
-        super.onPause()
-        binding.adView.pause()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        binding.adView.resume()
     }
 }

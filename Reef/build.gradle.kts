@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.google.services)
 }
 
 android {
@@ -16,15 +15,6 @@ android {
         versionName = "1.1.0"
     }
 
-    signingConfigs {
-        getByName("debug") {
-            storeFile = file("keystore-release.jks")
-            storePassword = "reefApp"
-            keyAlias = "Reef"
-            keyPassword = "reefApp"
-        }
-    }
-
     viewBinding.isEnabled = true
 
     buildFeatures.buildConfig = true
@@ -36,10 +26,6 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("debug")
-        }
-        debug {
-            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -58,8 +44,4 @@ dependencies {
     implementation(libs.androidx.activity)
 
     implementation(libs.appintro)
-    implementation(libs.play.services.ads)
-
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
 }
